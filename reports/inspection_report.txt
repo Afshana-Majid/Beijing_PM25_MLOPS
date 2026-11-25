@@ -1,0 +1,70 @@
+AIR QUALITY DATA INSPECTION REPORT
+========================================
+
+Dataset Shape:
+(35064, 19)
+
+Column Names:
+['No', 'year', 'month', 'day', 'hour', 'PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'TEMP', 'PRES', 'DEWP', 'RAIN', 'wd', 'WSPM', 'station', 'timestamp']
+
+Data Types:
+No                    int64
+year                  int64
+month                 int64
+day                   int64
+hour                  int64
+PM2.5               float64
+PM10                float64
+SO2                 float64
+NO2                 float64
+CO                  float64
+O3                  float64
+TEMP                float64
+PRES                float64
+DEWP                float64
+RAIN                float64
+wd                      str
+WSPM                float64
+station                 str
+timestamp    datetime64[us]
+dtype: object
+
+Missing Values:
+No            0
+year          0
+month         0
+day           0
+hour          0
+PM2.5       925
+PM10        718
+SO2         935
+NO2        1023
+CO         1776
+O3         1719
+TEMP         20
+PRES         20
+DEWP         20
+RAIN         20
+wd           81
+WSPM         14
+station       0
+dtype: int64
+
+Total Missing Cells: 7271
+
+PM2.5 Summary:
+count    34139.000000
+mean        82.773611
+std         82.135694
+min          3.000000
+25%         22.000000
+50%         58.000000
+75%        114.000000
+max        898.000000
+Name: PM2.5, dtype: float64
+
+Duplicate Rows: 0
+
+Earliest Timestamp: 2013-03-01 00:00:00
+Latest Timestamp: 2017-02-28 23:00:00
+Timestamp Sorted: True
