@@ -127,3 +127,6 @@ pip install -r requirements.txt
 Git is used to track project changes and maintain version history.
 
 Large datasets, trained models, virtual environments, and local configuration files are excluded through `.gitignore`.
+## Git Branch Exercise
+
+Created and tested a separate branch named practical06-branch.
