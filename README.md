@@ -1,27 +1,30 @@
-# Beijing Multi-Site Air Quality Prediction (MLOps)
+# Beijing PM2.5 One-Hour-Ahead Forecasting
+
+MSc AI/ML Semester III MLOps Laboratory Project.
 
 ## 1. Project Overview
 
-This project focuses on predicting PM2.5 air pollution levels using historical air quality data collected from 12 monitoring stations in Beijing, China.
+This project focuses on predicting PM2.5 concentration one hour ahead using historical air-quality observations from Beijing, China.
 
-Machine Learning techniques are used to analyze environmental factors and predict PM2.5 concentration.
+Machine Learning techniques are used to analyze air-quality data and forecast future PM2.5 levels.
 
 ## 2. Project Objectives
 
-- Analyze Beijing air quality data.
-- Clean and preprocess the dataset.
+- Inspect and understand the dataset.
+- Clean and preprocess air-quality data.
 - Perform Exploratory Data Analysis (EDA).
-- Apply Feature Engineering.
-- Train Machine Learning models.
-- Evaluate model performance.
-- Generate PM2.5 predictions.
-- Perform model testing.
+- Apply feature engineering.
+- Prepare time-based training, validation, and test datasets.
+- Train and evaluate Machine Learning models.
+- Apply Git version control.
 
 ## 3. Dataset Description
 
-The dataset contains air quality measurements from 12 monitoring stations in Beijing.
+The project uses the Beijing Multi-Site Air Quality dataset.
 
-It includes the following features:
+The forecasting work focuses on the Aotizhongxin monitoring station.
+
+Important features include:
 
 - PM2.5
 - PM10
@@ -29,22 +32,16 @@ It includes the following features:
 - NO2
 - CO
 - O3
-- Temperature (TEMP)
-- Pressure (PRES)
-- Dew Point (DEWP)
-- Rain
-- Wind Speed (WSPM)
+- TEMP
+- PRES
+- DEWP
+- RAIN
 - Wind Direction (wd)
-
-**Dataset Period:** March 2013 to February 2017.
-
-**Total Original Records:** 420,768
-
-**Records After Cleaning:** 412,029
+- Wind Speed (WSPM)
 
 ## 4. Technologies Used
 
-- Python 3.14
+- Python
 - Pandas
 - NumPy
 - Matplotlib
@@ -56,32 +53,13 @@ It includes the following features:
 
 ```text
 Beijing_PM25_MLOPS/
-│
 ├── data/
 │   ├── raw/
 │   └── processed/
-│       ├── cleaned_data.csv
-│       └── engineered_data.csv
-│
 ├── models/
-│   └── random_forest_model.pkl
-│
 ├── reports/
-│   ├── pm25_distribution.png
-│   └── pm25_by_station.png
-│
 ├── src/
-│   ├── check_environment.py
-│   ├── load_data.py
-│   ├── clean_data.py
-│   ├── eda.py
-│   ├── feature_engineering.py
-│   ├── train_model.py
-│   └── predict.py
-│
 ├── tests/
-│   └── test_model.py
-│
 ├── requirements.txt
 ├── .gitignore
 └── README.md
@@ -90,60 +68,62 @@ Beijing_PM25_MLOPS/
 ## 6. Project Workflow
 
 1. Environment Setup
-2. Data Loading
+2. Data Inspection
 3. Data Cleaning
 4. Exploratory Data Analysis
 5. Feature Engineering
-6. Model Training
-7. Model Evaluation
-8. Model Prediction
-9. Model Testing
+6. Time-Based Data Splitting
+7. Model Training and Evaluation
+8. Git Version Control
 
-## 7. Machine Learning Models
+## 7. Model Performance
 
-Two regression models were trained:
+The Ridge Regression model was selected during Practical 05.
 
-1. Linear Regression
-2. Random Forest Regressor
+Test Results:
 
-## 8. Model Performance
+- Test MAE: 10.69
+- Test RMSE: 19.75
 
-| Evaluation Metric | Linear Regression | Random Forest |
-|---|---:|---:|
-| MAE | 16.75 | 12.69 |
-| RMSE | 24.25 | 21.44 |
-| R2 Score | 0.915 | 0.934 |
+The trained model pipeline was saved as:
 
-**Best Performing Model:** Random Forest Regressor
+`models/ridge_pm25_pipeline.joblib`
 
-Random Forest performed better because it achieved lower MAE and RMSE and a higher R2 score.
+The evaluation report was saved as:
 
-## 9. How to Run the Project
+`reports/practical05_metrics.json`
 
-### Step 1: Create Virtual Environment
+## 8. How to Run the Project
+
+### Create Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-### Step 2: Activate Virtual Environment
-
-For Windows PowerShell:
+### Activate Virtual Environment
 
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
 
-### Step 3: Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 4: Load Dataset
+## 9. Practical Progress
 
-```bash
-python src/load_data.py
-```
+- Practical 01: Project Setup
+- Practical 02: Data Inspection and EDA
+- Practical 03: Data Cleaning
+- Practical 04: Feature Engineering and Data Splitting
+- Practical 05: Model Training and Evaluation
+- Practical 06: Git Version Control
 
-### Step 5: Clean Dataset
+## 10. Version Control
+
+Git is used to track project changes and maintain version history.
+
+Large datasets, trained models, virtual environments, and local configuration files are excluded through `.gitignore`.

@@ -16,7 +16,8 @@ print("DATASET LOADED")
 print("Rows and columns:", df.shape)
 print("Column names:", df.columns.tolist())
 print("First five rows:")
-print(df.head())
+print(df.head(10))
+print(df.tail())
 print("\nDATA TYPES")
 print(df.dtypes)
 print("\nMISSING VALUES PER COLUMN")
@@ -24,6 +25,10 @@ print("\nMISSING VALUES PER COLUMN")
 missing_counts = df.isna().sum()
 
 print(missing_counts)
+print("\nMISSING PM2.5 VALUES")
+print(df["PM2.5"].isna().sum())
+print("\nTEMPERATURE SUMMARY")
+print(df["TEMP"].describe())
 
 print("\nTOTAL MISSING CELLS")
 print(missing_counts.sum())
@@ -71,3 +76,4 @@ with report_path.open("w", encoding="utf-8") as report:
     )
 
 print("\nInspection report saved successfully!")
+

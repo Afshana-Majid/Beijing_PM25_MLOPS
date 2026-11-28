@@ -1,0 +1,77 @@
+
+PRACTICAL 03 - DATA QUALITY ASSESSMENT REPORT
+
+DATASET INFORMATION
+Original Rows: 35064
+Original Columns: 18
+
+TIMESTAMP ASSESSMENT
+Invalid Timestamps: 0
+Duplicate Timestamps: 0
+Chronologically Sorted: True
+
+MISSING VALUES PER COLUMN
+No              0
+year            0
+month           0
+day             0
+hour            0
+PM2.5         925
+PM10          718
+SO2           935
+NO2          1023
+CO           1776
+O3           1719
+TEMP           20
+PRES           20
+DEWP           20
+RAIN           20
+wd             81
+WSPM           14
+station         0
+timestamp       0
+
+MISSING VALUES PERCENTAGE
+No           0.00
+year         0.00
+month        0.00
+day          0.00
+hour         0.00
+PM2.5        2.64
+PM10         2.05
+SO2          2.67
+NO2          2.92
+CO           5.07
+O3           4.90
+TEMP         0.06
+PRES         0.06
+DEWP         0.06
+RAIN         0.06
+wd           0.23
+WSPM         0.04
+station      0.00
+timestamp    0.00
+
+EXACT DUPLICATE ROWS
+0
+
+NEGATIVE POLLUTANT VALUES
+PM2.5    0
+PM10     0
+SO2      0
+NO2      0
+CO       0
+O3       0
+
+SAFE CLEANING
+Original Rows: 35064
+Cleaned Rows: 35064
+Missing PM2.5 After Cleaning: 925
+
+MISSING HOURS
+Expected Hours: 35064
+Actual Hours: 35064
+Missing Hours: 0
+
+FINAL CLEANED DATASET
+Shape: (35064, 19)

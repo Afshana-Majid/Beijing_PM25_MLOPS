@@ -5,3 +5,8 @@ __pycache__/
 data/raw/
 data/processed/
 models/
+.pytest_cache/
+.env.*
+!.env.example
+reports/*.png
+.vscode/

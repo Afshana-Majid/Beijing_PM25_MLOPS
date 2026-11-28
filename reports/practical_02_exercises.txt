@@ -1,0 +1,34 @@
+**Exercise A: Dataset Rows and Columns**
+
+The dataset contains 35,064 rows and 18 columns. Each row represents one hourly air-quality observation, and each column contains a different variable.
+
+**Exercise B: First 10 Rows**
+
+The `df.head(10)` command displays the first 10 rows of the dataset. It helps us understand the structure and values of the dataset.
+
+**Exercise C: Last 5 Rows**
+
+The `df.tail()` command displays the last 5 rows. The first rows belong to March 2013, while the last rows belong to February 2017.
+
+**Exercise D: Missing PM2.5 Values**
+
+The command `df["PM2.5"].isna().sum()` counts missing values in the PM2.5 column. The result is 925 missing values.
+
+**Exercise E: Temperature Summary**
+
+The `df["TEMP"].describe()` command displays the statistical summary of the temperature column.
+
+- Mean temperature: 13.58°C
+- Minimum temperature: -16.8°C
+
+The dataset contains 35,044 non-missing temperature values.
+
+**Exercise F: Duplicate Rows and Repeated Timestamps**
+
+A duplicate entire row occurs when all values in a row are exactly the same as another row.
+
+A repeated timestamp occurs when two or more rows have the same date and time, but other column values may be different.
+
+The `df.duplicated().sum()` command checks completely duplicate rows. Our dataset has 0 duplicate rows.
+
+No records should be deleted at this stage because data cleaning will be performed in Practical 03.
